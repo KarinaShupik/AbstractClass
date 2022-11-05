@@ -1,25 +1,25 @@
 #include <iostream>
 using namespace std;
 
-//Шупик Карина
+//РЁСѓРїРёРє РљР°СЂРёРЅР°
 
-//202ТН
+//202РўРќ
 
-/*1. Визначте абстрактний клас трикутників і дві його реалізації: за трьома вершинами і за трьома сторонами.
-2. Доповніть клас трикутників конструктором за основами його трьох
-медіан. Реалізуйте метод обчислення довільної медіани трикутника.
-3. За довільною стороною трикутника знайдіть паралельну їй середню
-лінію.
-4. Визначте ієрархію трикутник-прямокутний трикутник. Реалізуйте
-функції обчислення довжин радіусів вписаного і описаного кіл.*/
+/*1. Р’РёР·РЅР°С‡С‚Рµ Р°Р±СЃС‚СЂР°РєС‚РЅРёР№ РєР»Р°СЃ С‚СЂРёРєСѓС‚РЅРёРєС–РІ С– РґРІС– Р№РѕРіРѕ СЂРµР°Р»С–Р·Р°С†С–С—: Р·Р° С‚СЂСЊРѕРјР° РІРµСЂС€РёРЅР°РјРё С– Р·Р° С‚СЂСЊРѕРјР° СЃС‚РѕСЂРѕРЅР°РјРё.
+2. Р”РѕРїРѕРІРЅС–С‚СЊ РєР»Р°СЃ С‚СЂРёРєСѓС‚РЅРёРєС–РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРј Р·Р° РѕСЃРЅРѕРІР°РјРё Р№РѕРіРѕ С‚СЂСЊРѕС…
+РјРµРґС–Р°РЅ. Р РµР°Р»С–Р·СѓР№С‚Рµ РјРµС‚РѕРґ РѕР±С‡РёСЃР»РµРЅРЅСЏ РґРѕРІС–Р»СЊРЅРѕС— РјРµРґС–Р°РЅРё С‚СЂРёРєСѓС‚РЅРёРєР°.
+3. Р—Р° РґРѕРІС–Р»СЊРЅРѕСЋ СЃС‚РѕСЂРѕРЅРѕСЋ С‚СЂРёРєСѓС‚РЅРёРєР° Р·РЅР°Р№РґС–С‚СЊ РїР°СЂР°Р»РµР»СЊРЅСѓ С—Р№ СЃРµСЂРµРґРЅСЋ
+Р»С–РЅС–СЋ.
+4. Р’РёР·РЅР°С‡С‚Рµ С–С”СЂР°СЂС…С–СЋ С‚СЂРёРєСѓС‚РЅРёРє-РїСЂСЏРјРѕРєСѓС‚РЅРёР№ С‚СЂРёРєСѓС‚РЅРёРє. Р РµР°Р»С–Р·СѓР№С‚Рµ
+С„СѓРЅРєС†С–С— РѕР±С‡РёСЃР»РµРЅРЅСЏ РґРѕРІР¶РёРЅ СЂР°РґС–СѓСЃС–РІ РІРїРёСЃР°РЅРѕРіРѕ С– РѕРїРёСЃР°РЅРѕРіРѕ РєС–Р».*/
 
 class Triangle {
 protected:
-	float firstSide, secondSide, thirdSide;	//	Сторони трикутника
-	float firstSideX, firstSideY, secondSideX, secondSideY, thirdSideX, thirdSideY;	//	Координати вершин трикутника
+	float firstSide, secondSide, thirdSide;	//	РЎС‚РѕСЂРѕРЅРё С‚СЂРёРєСѓС‚РЅРёРєР°
+	float firstSideX, firstSideY, secondSideX, secondSideY, thirdSideX, thirdSideY;	//	РљРѕРѕСЂРґРёРЅР°С‚Рё РІРµСЂС€РёРЅ С‚СЂРёРєСѓС‚РЅРёРєР°
 public:
 
-	Triangle() {	//	Конструктор за замовченням
+	Triangle() {	//	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р·Р° Р·Р°РјРѕРІС‡РµРЅРЅСЏРј
 		firstSide = 0;
 		secondSide = 0;
 		thirdSide = 0;
@@ -32,13 +32,13 @@ public:
 	}
 
 	virtual void showData() = 0;
-	virtual void calcData() = 0;	//	Розрахунки в трикутниках
+	virtual void calcData() = 0;	//	Р РѕР·СЂР°С…СѓРЅРєРё РІ С‚СЂРёРєСѓС‚РЅРёРєР°С…
 };
 
 class TriangleTop : public Triangle {
 public:
 
-	TriangleTop() {	//	Конструктор за замовчуванням
+	TriangleTop() {	//	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р·Р° Р·Р°РјРѕРІС‡СѓРІР°РЅРЅСЏРј
 		firstSideX = 0;
 		firstSideY = 0;
 		secondSideX = 0;
@@ -48,7 +48,7 @@ public:
 	}
 
 	void showData() {
-		cout << "Enter coordinates of triangle`s apex: " << endl;//вводимо координати вершин трикутника
+		cout << "Enter coordinates of triangle`s apex: " << endl;//РІРІРѕРґРёРјРѕ РєРѕРѕСЂРґРёРЅР°С‚Рё РІРµСЂС€РёРЅ С‚СЂРёРєСѓС‚РЅРёРєР°
 		cout << "A.x: ";
 		cin >> firstSideX;
 		cout << "A.y: ";
@@ -64,12 +64,12 @@ public:
 	}
 
 	void calcData() {
-		firstSide = sqrt(pow((secondSideX - firstSideX), 2) + pow((secondSideY - firstSideY), 2));//AB - знаходимо довжини 3 сторін трикутника за вказаними координатами
+		firstSide = sqrt(pow((secondSideX - firstSideX), 2) + pow((secondSideY - firstSideY), 2));//AB - Р·РЅР°С…РѕРґРёРјРѕ РґРѕРІР¶РёРЅРё 3 СЃС‚РѕСЂС–РЅ С‚СЂРёРєСѓС‚РЅРёРєР° Р·Р° РІРєР°Р·Р°РЅРёРјРё РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё
 		secondSide = sqrt(pow((thirdSideX - secondSideX), 2) + pow((thirdSideY - secondSideY), 2));//BC
 		thirdSide = sqrt(pow((thirdSideX - firstSideX), 2) + pow((thirdSideY - firstSideY), 2));//AC
 
 		if (firstSide <= 0) {
-			cout << "AB side " << firstSide << "doesn`t exist!" << endl;//якщо сторона дорівнює або менша 0, то вона не існує
+			cout << "AB side " << firstSide << "doesn`t exist!" << endl;//СЏРєС‰Рѕ СЃС‚РѕСЂРѕРЅР° РґРѕСЂС–РІРЅСЋС” Р°Р±Рѕ РјРµРЅС€Р° 0, С‚Рѕ РІРѕРЅР° РЅРµ С–СЃРЅСѓС”
 		}
 		else if (secondSide <= 0) {
 			cout << "BC side " << secondSide << "doesn`t exist!" << endl;
@@ -77,14 +77,14 @@ public:
 		else if (thirdSide <= 0) {
             cout << "AC side " << thirdSide << "doesn`t exist!" << endl;
 		}
-		else if (firstSide < secondSide + thirdSide && thirdSide < firstSide + secondSide && secondSide < firstSide + thirdSide) {//перевіряємо умову існування трикутника
+		else if (firstSide < secondSide + thirdSide && thirdSide < firstSide + secondSide && secondSide < firstSide + thirdSide) {//РїРµСЂРµРІС–СЂСЏС”РјРѕ СѓРјРѕРІСѓ С–СЃРЅСѓРІР°РЅРЅСЏ С‚СЂРёРєСѓС‚РЅРёРєР°
 			
 			cout << "AB side: " << firstSide << " cm" << endl;
 			cout << "BC side: " << secondSide << " cm" << endl;
 			cout << "AC side: " << thirdSide << " cm" << endl;
 
-			cout << "Middle line of triangle equal to KR (paralel to third side): " << thirdSide / 2 << " cm" << endl;//середня лінія трикутника
-			cout << "Median AD (first apex to second side): " << sqrt(2 * (pow(thirdSide, 2) + pow(firstSide, 2)) - pow(secondSide, 2)) / 2 << " cm" << endl;//медіана трикутника AD (проведена з вершини А до сторони ВС)
+			cout << "Middle line of triangle equal to KR (paralel to third side): " << thirdSide / 2 << " cm" << endl;//СЃРµСЂРµРґРЅСЏ Р»С–РЅС–СЏ С‚СЂРёРєСѓС‚РЅРёРєР°
+			cout << "Median AD (first apex to second side): " << sqrt(2 * (pow(thirdSide, 2) + pow(firstSide, 2)) - pow(secondSide, 2)) / 2 << " cm" << endl;//РјРµРґС–Р°РЅР° С‚СЂРёРєСѓС‚РЅРёРєР° AD (РїСЂРѕРІРµРґРµРЅР° Р· РІРµСЂС€РёРЅРё Рђ РґРѕ СЃС‚РѕСЂРѕРЅРё Р’РЎ)
 		}
 		else {
 			cout << "Triangle doesn`t exist!" << endl;
@@ -95,14 +95,14 @@ public:
 class TriangleSides : public Triangle {
 public:
 
-	TriangleSides() {	//Конструктор за замовчуванням
+	TriangleSides() {	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р·Р° Р·Р°РјРѕРІС‡СѓРІР°РЅРЅСЏРј
 		firstSide = 0;
 		secondSide = 0;
 		thirdSide = 0;
 	}
 
 	void showData() {
-		cout << "Enter triangle`s sides: " << endl;//вводимо сторони трикутника
+		cout << "Enter triangle`s sides: " << endl;//РІРІРѕРґРёРјРѕ СЃС‚РѕСЂРѕРЅРё С‚СЂРёРєСѓС‚РЅРёРєР°
 		cout << "AB side: ";
 		cin >> firstSide;
 		cout << "BC side: ";
@@ -113,9 +113,9 @@ public:
 	}
 
 	void calcData() {
-		if (firstSide < secondSide + thirdSide && secondSide < thirdSide + firstSide && thirdSide < firstSide + secondSide) {//перевіряємо умову існування трикутника
-			cout << "Middle line of triangle equal to KR (paralel to third side): " << thirdSide / 2 << " cm" << endl;//середня лінія трикутника
-			cout << "Median BK (second apex to third side): " << sqrt(2 * (pow(secondSide, 2) + pow(firstSide, 2)) - pow(thirdSide, 2))/2 << " cm" << endl;//медіана трикутника BK (проведена з вершини B до сторони AС)
+		if (firstSide < secondSide + thirdSide && secondSide < thirdSide + firstSide && thirdSide < firstSide + secondSide) {//РїРµСЂРµРІС–СЂСЏС”РјРѕ СѓРјРѕРІСѓ С–СЃРЅСѓРІР°РЅРЅСЏ С‚СЂРёРєСѓС‚РЅРёРєР°
+			cout << "Middle line of triangle equal to KR (paralel to third side): " << thirdSide / 2 << " cm" << endl;//СЃРµСЂРµРґРЅСЏ Р»С–РЅС–СЏ С‚СЂРёРєСѓС‚РЅРёРєР°
+			cout << "Median BK (second apex to third side): " << sqrt(2 * (pow(secondSide, 2) + pow(firstSide, 2)) - pow(thirdSide, 2))/2 << " cm" << endl;//РјРµРґС–Р°РЅР° С‚СЂРёРєСѓС‚РЅРёРєР° BK (РїСЂРѕРІРµРґРµРЅР° Р· РІРµСЂС€РёРЅРё B РґРѕ СЃС‚РѕСЂРѕРЅРё AРЎ)
 		}
 		else {
 			cout << "Triangle doesn`t exist!" << endl;
@@ -123,11 +123,11 @@ public:
 	}
 };
 
-class RightAngledTriangle : public Triangle {//Прямокутний трикутник
-	float R, r;	//Довжини вписаного та описаного радіусів прямокутного трикутника
+class RightAngledTriangle : public Triangle {//РџСЂСЏРјРѕРєСѓС‚РЅРёР№ С‚СЂРёРєСѓС‚РЅРёРє
+	float R, r;	//Р”РѕРІР¶РёРЅРё РІРїРёСЃР°РЅРѕРіРѕ С‚Р° РѕРїРёСЃР°РЅРѕРіРѕ СЂР°РґС–СѓСЃС–РІ РїСЂСЏРјРѕРєСѓС‚РЅРѕРіРѕ С‚СЂРёРєСѓС‚РЅРёРєР°
 public:
 
-	RightAngledTriangle() {	//	Конструктор за замовченням
+	RightAngledTriangle() {	//	РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р·Р° Р·Р°РјРѕРІС‡РµРЅРЅСЏРј
 		firstSide = 0;
 		secondSide = 0;
 		thirdSide = 0;
@@ -147,27 +147,27 @@ public:
 	}
 
 	void calcData() {
-		if (firstSide < secondSide + thirdSide && secondSide < thirdSide + firstSide && thirdSide < firstSide + secondSide) {//перевіряємо умову існування трикутника
-			if (secondSide == sqrt(pow(firstSide, 2) + pow(thirdSide, 2))) {//знаходимо серед введених сторін тр. гіпотенузу шляхом перевірки всіх трьох сторін за теоремою Піфагора
+		if (firstSide < secondSide + thirdSide && secondSide < thirdSide + firstSide && thirdSide < firstSide + secondSide) {//РїРµСЂРµРІС–СЂСЏС”РјРѕ СѓРјРѕРІСѓ С–СЃРЅСѓРІР°РЅРЅСЏ С‚СЂРёРєСѓС‚РЅРёРєР°
+			if (secondSide == sqrt(pow(firstSide, 2) + pow(thirdSide, 2))) {//Р·РЅР°С…РѕРґРёРјРѕ СЃРµСЂРµРґ РІРІРµРґРµРЅРёС… СЃС‚РѕСЂС–РЅ С‚СЂ. РіС–РїРѕС‚РµРЅСѓР·Сѓ С€Р»СЏС…РѕРј РїРµСЂРµРІС–СЂРєРё РІСЃС–С… С‚СЂСЊРѕС… СЃС‚РѕСЂС–РЅ Р·Р° С‚РµРѕСЂРµРјРѕСЋ РџС–С„Р°РіРѕСЂР°
 				cout << "Hypotenuse of second side BC equal to: " << secondSide << " cm" << endl;
 				R = secondSide / 2;
 				r = (firstSide + thirdSide - secondSide) / 2;
-				cout << "Radius of outside circle R equal to: " << R << " cm" << endl;//радіус описаного кола
-				cout << "Radius of inside circle r equal to: " << r << " сm" << endl;//радіус вписаного кола
+				cout << "Radius of outside circle R equal to: " << R << " cm" << endl;//СЂР°РґС–СѓСЃ РѕРїРёСЃР°РЅРѕРіРѕ РєРѕР»Р°
+				cout << "Radius of inside circle r equal to: " << r << " СЃm" << endl;//СЂР°РґС–СѓСЃ РІРїРёСЃР°РЅРѕРіРѕ РєРѕР»Р°
 			}
 			else if (firstSide == sqrt(pow(thirdSide, 2) + pow(secondSide, 2))) {
 				cout << "Hypotenuse of first side AB equal to: " << firstSide << " cm" << endl;
 				R = firstSide / 2;
 				r = (thirdSide + secondSide - firstSide) / 2;
 				cout << "Radius of outside circle R equal to: " << R << " cm" << endl;
-				cout << "Radius of inside circle r equal to: " << r << " сm" << endl;
+				cout << "Radius of inside circle r equal to: " << r << " СЃm" << endl;
 			}
 			else if (thirdSide == sqrt(pow(firstSide, 2) + pow(secondSide, 2))) {
 				cout << "Hypotenuse of third side AC equal to: " << thirdSide << " cm" << endl;
 				R = thirdSide / 2;
 				r = (firstSide + secondSide - thirdSide) / 2;
 				cout << "Radius of outside circle R equal to: " << R << " cm" << endl;
-				cout << "Radius of inside circle r equal to: " << r << " сm" << endl;
+				cout << "Radius of inside circle r equal to: " << r << " СЃm" << endl;
 			}
 			else
 				cout << "Triangle isn`t right-angled!" << endl;
